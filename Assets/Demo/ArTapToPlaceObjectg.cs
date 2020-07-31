@@ -23,6 +23,8 @@ public class ArTapToPlaceObjectg : MonoBehaviour
     private Pose placementPos;
     private bool placementPoseIsValid = false;
     private GameObject instance = null;
+
+    private bool ocultar_patitas = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +35,26 @@ public class ArTapToPlaceObjectg : MonoBehaviour
         
 
         raycastManager = FindObjectOfType<ARRaycastManager>();
+
+        manejadoraudio.OnStartListening += () =>
+        {
+            ocultar_patitas = true;
+        };
+        ManejadorAvatar.OnIdle += () =>
+        {
+            ocultar_patitas = false;
+        };
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (ocultar_patitas)
+        {
+            placementPoseIsValid = false;
+            placementIndicator.SetActive(false);
+            return;
+        }
         UpdatePlacementPose();
         UpdatePlacementIndicator();
         if (placementPoseIsValid && Input.touchCount > 0)

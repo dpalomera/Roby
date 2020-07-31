@@ -80,30 +80,44 @@ public class ConversationManager : MonoBehaviour
             File.WriteAllText(Application.persistentDataPath + "/ret.json", response.Text);
             var json = JObject.Parse(response.Text);
             var result = json["response"]["result"];
+
+            avisos.GetComponentInChildren<Text>().text = "2";
+
             var respuesta = new Respuesta()
             {
                 session_id = result.Value<string>("session_id"),
                 audio = result.Value<string>("audio"),
             };
 
-            var context = json["response"]["result"]["context"];
-            if(context.Value<JArray>("Actividades").Count > 0)
+            avisos.GetComponentInChildren<Text>().text = "3";
+            
+            var context = result["context"];
+
+            avisos.GetComponentInChildren<Text>().text = "4";
+            var con_actividad = context.Value<JArray>("Actividad").Count > 0;
+            if (con_actividad)
             {
-                OnActividad?.Invoke("globo");
+                avisos.GetComponentInChildren<Text>().text = "Tengo actividad!";
+                
             }
+            else
+            {
+                avisos.GetComponentInChildren<Text>().text = "No Tengo actividad!";
+            }
+            
 
 
-            avisos.GetComponentInChildren<Text>().text = respuesta.session_id + " -  " + respuesta.audio.Length.ToString() + " - " + session_id;
+            //avisos.GetComponentInChildren<Text>().text = respuesta.session_id + " -  " + respuesta.audio.Length.ToString() + " - " + session_id;
 
             session_id = respuesta.session_id;
             string path = Application.persistentDataPath + "/miaudio.ogg";
             File.WriteAllBytes(path, Convert.FromBase64String(respuesta.audio));
 
 
-            StartCoroutine(loadMusic(path));
+            StartCoroutine(loadMusic(path, con_actividad));
         });
     }
-    IEnumerator loadMusic(string filename)
+    IEnumerator loadMusic(string filename, bool con_actividad)
     {
 
         using (var www = UnityWebRequestMultimedia.GetAudioClip("file://" + filename, AudioType.OGGVORBIS))
@@ -113,11 +127,17 @@ public class ConversationManager : MonoBehaviour
             audioSource.clip = clip;
             audioSource.Play();
             playing = true;
-            if(OnStartTalking != null)
+            avisos.GetComponentInChildren<Text>().text = "4";
+            if (con_actividad)
             {
-                OnStartTalking();
+                OnActividad?.Invoke("globo");
+            }
+            else
+            {
+                OnStartTalking?.Invoke();
             }
             
+
         }
 
     }

@@ -21,6 +21,7 @@ public class manejadoraudio : EventTrigger
 
     private AudioSource audioSource;
 
+
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();       
@@ -30,11 +31,8 @@ public class manejadoraudio : EventTrigger
     public override void OnPointerDown(PointerEventData eventDat)
     {
         audioSource.clip = Microphone.Start(null, false, 10, 11025);
-        if(OnStartListening != null)
-        {
-            OnStartListening();
-        }
-        
+        OnStartListening?.Invoke();
+
     }
 
     public override void OnPointerUp(PointerEventData eventDat)
@@ -51,11 +49,8 @@ public class manejadoraudio : EventTrigger
 
         clip.GetData(samples, 0);
 
-        if(OnFinishListening != null)
-        {
-            OnFinishListening();
-        }
-            
+        OnFinishListening?.Invoke();
+
 
         short[] intData = new short[samples.Length];
         //converting in 2 float[] steps to Int16[], //then Int16[] to Byte[]
