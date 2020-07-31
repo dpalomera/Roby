@@ -5,7 +5,7 @@ Repositorio con el código fuente de la aplicación para celulares Roby **HEA**l
 La descarga del proyecto compilado para Android está disponible [desde la página de realeases](https://github.com/dpalomera/Roby/releases).
 
 ## Acerca de Roby
-Se ha observado que una de las principales problemáticas de los niños la falta de comunicación que tienen los niños con sus padres.  Generalmente, no pierden la oportunidad de expresar lo que están pensando o sintiendo, sin embargo, el contexto actual los ha llevado a lidiar con nuevos problemas y situaciones a los que sus padres tampoco se han visto enfrentados y muchas veces también se encuentran sobrepasados. 
+Generalmente, los niños no pierden la oportunidad de expresar lo que están pensando o sintiendo, sin embargo, el contexto actual de emergencia producto del COVID-19 los ha llevado a lidiar con nuevos problemas y situaciones a los que sus padres tampoco se han visto enfrentados y muchas veces también se encuentran sobrepasados. 
  
 Utilizando el lenguaje hablado como herramienta desarrollamos Roby Health Partner, un acompañante virtual con el que los niños pueden conversar de manera natural y contar como se sienten, encontrando en él una ayuda y respuesta a sus inquietudes. Este acompañante identifica la sintomatología que presenta el niño y la clasificará en: ansiedad, tristeza, alteraciones de sueño, irritabilidad y duelo, entregando escucha, atención, pautas y actividades pertinentes para ayudar al niño a sobrellevar mejor lo que está sintiendo.
 
