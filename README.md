@@ -7,7 +7,7 @@ There is a link of the Android APK build in the [releases page](https://github.c
 ## About Roby HEAP
 Generally, children do not miss the opportunity to express what they are thinking or feeling, however, the current emergency context resulting from COVID-19 has led them to deal with new problems and situations that their parents have not faced either and many times they are also overwhelmed.
 
-Using spoken language as a tool, we developed Roby Health Partner, a virtual parner with whom children can talk naturally and tell how they feel, finding in it a help and answer to their concerns. Roby identifies the symptoms presented by the child and classifies them into: anxiety, sadness, sleep disturbances, irritability and grief, providing listening, attention, guidelines and relevant activities to help the child to better cope with their feelings.
+Using the spoken language as our spearhead, we developed Roby Health Partner, a virtual parner with whom children can talk naturally and tell how they feel, finding in it a help and answer to their concerns. Roby identifies the symptoms presented by the child and classifies them into: anxiety, sadness, sleep disturbances, irritability and grief, providing listening, attention, guidelines and relevant activities to help the child to better cope with their feelings.
 
 ## Building
 TBD
