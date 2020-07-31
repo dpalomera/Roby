@@ -1,6 +1,9 @@
 # Roby
 Repositorio con el código fuente de la aplicación para celulares Roby **HEA**lth **P**artner. Esta solución está desarrollanda ocupando el motor Unity en su versión `2020.1.0f1`.
 
+## Descarga
+La descarga del proyecto compilado para Android está disponible [desde la página de realeases](https://github.com/dpalomera/Roby/releases).
+
 ## Instalación
 TBD
 
