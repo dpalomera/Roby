@@ -1,33 +1,33 @@
 # Roby HEAP
-Repositorio con el código fuente de la aplicación para celulares Roby **HEA**lth **P**artner. Esta solución está desarrollanda ocupando el motor Unity en su versión `2020.1.0f1`.
+Official repo of Roby **HEA**lth **P**artner mobile App. Please note Unity version `2020.1.0f1` is needed to build and a ARCore-enabled Android device is needed to run it.
 
-## Descarga
-La descarga del proyecto compilado para Android está disponible [desde la página de realeases](https://github.com/dpalomera/Roby/releases).
+## Download
+There is a link of the Android APK build in the [releases page](https://github.com/dpalomera/Roby/releases).
 
-## Acerca de Roby
-Generalmente, los niños no pierden la oportunidad de expresar lo que están pensando o sintiendo, sin embargo, el contexto actual de emergencia producto del COVID-19 los ha llevado a lidiar con nuevos problemas y situaciones a los que sus padres tampoco se han visto enfrentados y muchas veces también se encuentran sobrepasados. 
- 
-Utilizando el lenguaje hablado como herramienta desarrollamos Roby Health Partner, un acompañante virtual con el que los niños pueden conversar de manera natural y contar como se sienten, encontrando en él una ayuda y respuesta a sus inquietudes. Este acompañante identifica la sintomatología que presenta el niño y la clasificará en: ansiedad, tristeza, alteraciones de sueño, irritabilidad y duelo, entregando escucha, atención, pautas y actividades pertinentes para ayudar al niño a sobrellevar mejor lo que está sintiendo.
+## About Roby HEAP
+Generally, children do not miss the opportunity to express what they are thinking or feeling, however, the current emergency context resulting from COVID-19 has led them to deal with new problems and situations that their parents have not faced either and many times they are also overwhelmed.
 
-## Instalación
+Using spoken language as a tool, we developed Roby Health Partner, a virtual parner with whom children can talk naturally and tell how they feel, finding in it a help and answer to their concerns. Roby identifies the symptoms presented by the child and classifies them into: anxiety, sadness, sleep disturbances, irritability and grief, providing listening, attention, guidelines and relevant activities to help the child to better cope with their feelings.
+
+## Building
 TBD
 
 ## API
-El código fuente de la función de IBM se puede encontrar en [Functions/api.js](Functions/api.js). Para evitar abusos se han borrado todas las llaves de este archivo, por lo que es necesario crear previamente todos los servicios y obtener las llaves pertinentes.
+Ruby uses an IBM Cloud Function (an openwhisk-based service) as endpoint to process and answer interactions. The source code of that service can be found in [Functions/api.js](Functions/api.js). In order to prevent abuses, all the keys in this file have been deleted, so it is necessary to previously create all the services and obtain the relevant keys.
 
-## Arquitectura
-Roby HEAP se comunica, mediante una API creada en IBM Cloud Functions, con los servicios de IBM de Speech to Text, Watson Assistant, Text to Speech, y IBM Cloud Object Storage (a modo de caché para los audios del TTS), de la forma que se presenta a continuación:
+## Architecture
+Roby HEAP communicates, via an API created in IBM Cloud Functions, with IBM's Speech to Text, Watson Assistant, Text to Speech, and IBM Cloud Object Storage services (as a cache for TTS audios), as follows:
 ![arquitectura](/arquitectura.jpg?raw=true "Arquitectura")
 
 
 ## Reconocimientos
-Roby HEAP ocupa las siguientes librerías y soluciones de terceros:
-* [IBM Speech to Text](https://www.ibm.com/cl-es/cloud/watson-speech-to-text) Para convertir la voz de los usuarios de la app a texto.
-* [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) para gestionar el dialogo conversacional, identificar intenciones, entidades y recomendar actividades.
-* [IBM Text to Speech](https://www.ibm.com/ar-es/cloud/watson-text-to-speech) para convertir el texto de las respuestas de Assistant a Audio.
-* [IBM Cloud Object Storage](https://www.ibm.com/cl-es/cloud/object-storage) para almacenar y reutilizar las respuestas de Text to Speech.
-* [AR Fundation](https://unity.com/es/unity/features/arfoundation) como marco de trabajo para la funcionalidad de realidad aumentada.
-* [ARCore](https://unity3d.com/es/partners/google/arcore) como implementación de AR para Android.
-* [Jammo Character](https://github.com/mixandjam/Jammo-Character) como avatar.
-* [JSONDotNet For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347) para obtener la información de respuesta de la API.
-* [NAudio](https://github.com/naudio/NAudio) como codificador y decodificador de audio.
+Roby HEAP uses the following services and libraries:
+* [IBM Speech to Text](https://www.ibm.com/cl-es/cloud/watson-speech-to-text) To convert the users' voice to text.
+* [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) to manage the conversational dialogue, identify intentions, entities and recommend activities.
+* [IBM Text to Speech](https://www.ibm.com/ar-es/cloud/watson-text-to-speech) to convert the text of the answers from Assistant to audio.
+* [IBM Cloud Object Storage](https://www.ibm.com/cl-es/cloud/object-storage) to store and reuse Text to Speech responses.
+* [AR Fundation](https://unity.com/es/unity/features/arfoundation) as AR Framework.
+* [ARCore](https://unity3d.com/es/partners/google/arcore) as AR implementation for Android.
+* [Jammo Character](https://github.com/mixandjam/Jammo-Character) as avatar.
+* [JSONDotNet For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347) to parse JSON responses.
+* [NAudio](https://github.com/naudio/NAudio) to deal with audio encode/decode.
