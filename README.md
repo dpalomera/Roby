@@ -9,9 +9,11 @@ Se ha observado que una de las principales problemáticas de los niños la falta
  
 Utilizando el lenguaje hablado como herramienta desarrollamos Roby Health Partner, un acompañante virtual con el que los niños pueden conversar de manera natural y contar como se sienten, encontrando en él una ayuda y respuesta a sus inquietudes. Este acompañante identifica la sintomatología que presenta el niño y la clasificará en: ansiedad, tristeza, alteraciones de sueño, irritabilidad y duelo, entregando escucha, atención, pautas y actividades pertinentes para ayudar al niño a sobrellevar mejor lo que está sintiendo.
 
-
 ## Instalación
 TBD
+
+## API
+El código fuente de la función de IBM se puede encontrar en [Functions/api.js](Functions/api.js). Para evitar abusos se han borrado todas las llaves de este archivo, por lo que es necesario crear previamente todos los servicios y obtener las llaves pertinentes.
 
 ## Arquitectura
 Roby HEAP se comunica, mediante una API creada en IBM Cloud Functions, con los servicios de IBM de Speech to Text, Watson Assistant, Text to Speech, y IBM Cloud Object Storage (a modo de caché para los audios del TTS), de la forma que se presenta a continuación:
