@@ -14,6 +14,8 @@ Roby HEAP ocupa las siguientes librerías y soluciones de terceros:
 * [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) para gestionar el dialogo conversacional, identificar intenciones, entidades y recomendar actividades.
 * [IBM Text to Speech](https://www.ibm.com/ar-es/cloud/watson-text-to-speech) para convertir el texto de las respuestas de Assistant a Audio.
 * [IBM Cloud Object Storage](https://www.ibm.com/cl-es/cloud/object-storage) para almacenar y reutilizar las respuestas de Text to Speech.
+* [AR Fundation](https://unity.com/es/unity/features/arfoundation) como marco de trabajo para la funcionalidad de realidad aumentada.
+* [ARCore](https://unity3d.com/es/partners/google/arcore) como implementación de AR para Android.
 * [Jammo Character](https://github.com/mixandjam/Jammo-Character) como avatar.
 * [JSONDotNet For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347) para obtener la información de respuesta de la API.
 * [NAudio](https://github.com/naudio/NAudio) como codificador y decodificador de audio.
