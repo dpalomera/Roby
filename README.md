@@ -20,7 +20,7 @@ Roby HEAP communicates, via an API created in IBM Cloud Functions, with IBM's Sp
 ![arquitectura](/arquitectura.jpg?raw=true "Arquitectura")
 
 
-## Reconocimientos
+## Acknowledgments
 Roby HEAP uses the following services and libraries:
 * [IBM Speech to Text](https://www.ibm.com/cl-es/cloud/watson-speech-to-text) To convert the users' voice to text.
 * [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) to manage the conversational dialogue, identify intentions, entities and recommend activities.
