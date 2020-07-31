@@ -5,7 +5,8 @@ Repositorio con el código fuente de la aplicación para celulares Roby **HEA**l
 TBD
 
 ## Arquitectura
-Roby HEAP se comunica, mediante una API creada en IBM Cloud Functions, con los servicios de IBM de Speech to Text, Watson Assistant, Text to Speech, y IBM Cloud Object Storage (a modo de caché para los audios del TTS).
+Roby HEAP se comunica, mediante una API creada en IBM Cloud Functions, con los servicios de IBM de Speech to Text, Watson Assistant, Text to Speech, y IBM Cloud Object Storage (a modo de caché para los audios del TTS), de la forma que se presenta a continuación:
+![arquitectura](/arquitectura.jpg?raw=true "Arquitectura")
 
 
 ## Reconocimientos
