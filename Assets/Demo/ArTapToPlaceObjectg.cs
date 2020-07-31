@@ -83,7 +83,7 @@ public class ArTapToPlaceObjectg : MonoBehaviour
         }
         instance.transform.Rotate(0, 180, 0);
         OnAvatarMovido?.Invoke();
-
+        ocultar_patitas = true;
 
     }
 

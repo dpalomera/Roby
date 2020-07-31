@@ -56,27 +56,16 @@ public class ManejadorAvatar : MonoBehaviour
 
     public IEnumerator AnimacionGlobo()
     {
-        //la intro (/unos 23 segundos)
-        SetAnimacionActiva("pregunta");
-        yield return new WaitForSeconds(5);
         SetAnimacionActiva("manos");
-        yield return new WaitForSeconds(10);
-        SetAnimacionActiva("pregunta");
-        yield return new WaitForSeconds(5);
-        SetAnimacionActiva("manos");
-        yield return new WaitForSeconds(5);
-        SetAnimacionActiva("pregunta");
-        yield return new WaitForSeconds(4);
-        SetAnimacionActiva("manos");
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
 
         //que hay dentro? (5 segundos)
         SetAnimacionActiva("pregunta");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         //espacio para la respuesta
         SetAnimacionActiva("idle");
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
 
 
         //que hace pasa? (2 segundos)
@@ -85,7 +74,7 @@ public class ManejadorAvatar : MonoBehaviour
 
         //espacio para la respuesta
         SetAnimacionActiva("idle");
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
 
         //bombin
         SetAnimacionActiva("idle");
